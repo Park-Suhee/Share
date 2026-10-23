@@ -3,12 +3,12 @@
 Build SKHASH input files for one Yeongdeok earthquake.
 
 Inputs:
-    data/EVENT_ID/event_info
-    data/EVENT_ID/pickinfo.txt
-    data/EVENT_ID/stn1.dat
-    /Users/suhee/opt/Korean_station_info.txt
-    /Users/suhee/opt/KS_KG_metadata_1.0.2.xml
-    data/EVENT_ID/hypoellipse_1/crustal_kim2011_AV.prm
+    test/20220409.174546/event_info
+    test/20220409.174546/pickinfo.txt
+    test/20220409.174546/stn1.dat
+    test/20220409.174546/Korean_station_info.txt
+    test/20220409.174546/KS_KG_metadata_1.0.2.xml
+    test/20220409.174546/crustal_kim2011_AV.prm
 
 Outputs:
     skhash_test/EVENT_ID/
@@ -36,9 +36,9 @@ import numpy as np
 # USER SETTINGS
 # ============================================================
 
-DATA_DIR = Path("/Users/suhee/Desktop/Yeongdeok/data")
-EVENT_ID = "20220409.174546"
-STATION_METADATA_FILE = Path("/Users/suhee//opt/Korean_station_info.txt")
+DATA_DIR = Path("your data directory") ### must edit
+EVENT_ID = "20220409.174546" ### must edit
+STATION_METADATA_FILE = Path("/test/20220409.174546/Korean_station_info.txt")
 #VELOCITY_MODEL_FILE = Path("crustal_kim2011_AV.prm")
 OUTPUT_ROOT = Path("skhash_test")
 USE_SP_RATIO = True
@@ -55,7 +55,7 @@ RATMIN = 3.0
 
 # Instrument response settings.
 REMOVE_RESPONSE = True
-RESPONSE_XML_FILE = Path("/Users/suhee/opt/Program/SKHASH/Script/KS_KG_metadata_1.0.2.xml/KS_KG_metadata_1.0.2.xml")
+RESPONSE_XML_FILE = Path("test/20220409.174546/KS_KG_metadata_1.0.2.xml")
 RESPONSE_PREFILT = (0.5, 0.8, 18.0, 20.0)
 RESPONSE_WATER_LEVEL = 60.0
 
