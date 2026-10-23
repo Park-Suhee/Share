@@ -1,0 +1,27 @@
+[Single event]
+python SP_compare.py \
+    --mode single \
+    --event 20220409.174546 \
+    --data-dir $your_data_directory_path \
+    --output sp_method_comparison_test
+
+[Output]
+sp_method_comparison_test/
+├── 20220409.174546
+│   ├── SP_comparison_all.csv
+│   └── SP_comparison.png
+├── single_event_SP_comparison.csv
+├── event_summary.csv
+└── single_event_SP_overview.png
+
+[Multi-events]
+python SP_compare.py \
+    --mode all \
+    --data-dir $your_data_directory_path \
+    --output sp_method_comparison_test
+
+[Output]
+sp_method_comparison_test/
+├── SP_comparison_all.csv
+├── SP_comparison.png
+└── event_summary.csv
